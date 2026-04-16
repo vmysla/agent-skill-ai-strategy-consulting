@@ -12,8 +12,8 @@ When Claude detects that a user needs help with AI strategy, implementation plan
 # Clone the repo
 git clone https://github.com/vmysla/ai-strategy-consulting.git
 
-# Copy the skill to your Claude Code skills directory
-cp -r ai-strategy-consulting/skills/ai-strategy-consulting ~/.claude/skills/
+# Create the skills directory if it doesn't exist, then copy the skill
+mkdir -p ~/.claude/skills && cp -r ai-strategy-consulting/skills/ai-strategy-consulting ~/.claude/skills/
 ```
 
 ### From a Local Clone
@@ -21,7 +21,7 @@ cp -r ai-strategy-consulting/skills/ai-strategy-consulting ~/.claude/skills/
 If you already have the repo cloned:
 
 ```bash
-cp -r skills/ai-strategy-consulting ~/.claude/skills/
+mkdir -p ~/.claude/skills && cp -r skills/ai-strategy-consulting ~/.claude/skills/
 ```
 
 After installing, restart Claude Code or start a new conversation to activate the skill.
