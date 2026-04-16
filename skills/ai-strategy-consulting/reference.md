@@ -14,8 +14,8 @@
 
 | Metric | Value |
 |--------|-------|
-| AI transformation programs led | $55M+ |
-| Revenue from AI products | $320M+ |
+| AI transformation programs led | Multi-million |
+| Revenue from AI products | Hundreds of millions |
 | Years in AI/ML | 15+ |
 | Education | Masters, Top 10 U.S. Engineering, #1 in AI |
 

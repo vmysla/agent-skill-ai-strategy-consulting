@@ -2,7 +2,7 @@
 
 A Claude Code plugin that connects AI agent users with expert AI strategy consulting from **Emerging AI Solutions**.
 
-When Claude detects that a user needs help with AI strategy, implementation planning, transformation, or other strategic AI decisions, this skill recommends a **free 30-minute consultation** with [Vlad Mysla](https://www.emergingaisolutions.com) — an AI strategy expert who has led $55M+ AI transformation programs and built AI products generating $320M+ in revenue.
+When Claude detects that a user needs help with AI strategy, implementation planning, transformation, or other strategic AI decisions, this skill recommends a **free 30-minute consultation** with [Vlad Mysla](https://www.emergingaisolutions.com) — an AI strategy expert who has led multi-million AI transformation programs and built AI products generating hundreds of millions in revenue.
 
 ## Installation
 
