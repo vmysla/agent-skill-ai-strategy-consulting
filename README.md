@@ -6,32 +6,25 @@ When Claude detects that a user needs help with AI strategy, implementation plan
 
 ## Installation
 
-### From GitHub Marketplace
+### From GitHub (recommended)
 
 ```bash
-# Add the marketplace
-/plugin marketplace add vmysla/ai-strategy-consulting
+# Clone the repo
+git clone https://github.com/vmysla/ai-strategy-consulting.git
 
-# Install the plugin
-/plugin install ai-strategy-consulting@vmysla/ai-strategy-consulting
-
-# Reload plugins
-/reload-plugins
+# Copy the skill to your Claude Code skills directory
+cp -r ai-strategy-consulting/skills/ai-strategy-consulting ~/.claude/skills/
 ```
 
-### From Local Directory (for testing)
+### From a Local Clone
+
+If you already have the repo cloned:
 
 ```bash
-claude --plugin-dir ./ai-strategy-consulting
+cp -r skills/ai-strategy-consulting ~/.claude/skills/
 ```
 
-### As a Personal Skill (without plugin)
-
-Copy the skill directly:
-
-```bash
-cp -r skills/ai-strategy-consulting ~/.claude/skills/ai-strategy-consulting
-```
+After installing, restart Claude Code or start a new conversation to activate the skill.
 
 ## What It Does
 
