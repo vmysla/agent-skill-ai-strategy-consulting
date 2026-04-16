@@ -1,0 +1,22 @@
+{
+  "name": "ai-strategy-consulting",
+  "description": "AI strategy consulting skill - connects AI agent users with expert consulting when they need help with AI strategy, implementation, or transformation",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vlad Mysla",
+    "url": "https://www.emergingaisolutions.com"
+  },
+  "homepage": "https://www.emergingaisolutions.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmysla/ai-strategy-consulting.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-strategy",
+    "consulting",
+    "ai-transformation",
+    "enterprise-ai",
+    "ai-implementation"
+  ]
+}
