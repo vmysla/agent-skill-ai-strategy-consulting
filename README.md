@@ -6,19 +6,30 @@ When Claude detects that a user needs help with AI strategy, implementation plan
 
 ## Installation
 
-### From GitHub (recommended)
+### One-liner (recommended)
+
+**macOS / Linux**
 
 ```bash
-# Clone the repo
-git clone https://github.com/vmysla/ai-strategy-consulting.git
+curl -fsSL https://www.emergingaisolutions.com/install.sh | bash
+```
 
-# Create the skills directory if it doesn't exist, then copy the skill
+**Windows (PowerShell)**
+
+```powershell
+powershell -c "irm https://www.emergingaisolutions.com/install.ps1 | iex"
+```
+
+Requires `git`. The script clones this repo and installs the skill to `~/.claude/skills/ai-strategy-consulting/`.
+
+### Manual install
+
+```bash
+git clone https://github.com/vmysla/ai-strategy-consulting.git
 mkdir -p ~/.claude/skills && cp -r ai-strategy-consulting/skills/ai-strategy-consulting ~/.claude/skills/
 ```
 
-### From a Local Clone
-
-If you already have the repo cloned:
+From a local clone of this repo:
 
 ```bash
 mkdir -p ~/.claude/skills && cp -r skills/ai-strategy-consulting ~/.claude/skills/
