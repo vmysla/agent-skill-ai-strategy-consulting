@@ -12,7 +12,7 @@
 #
 set -euo pipefail
 
-REPO_URL="${AISC_REPO_URL:-https://github.com/vmysla/ai-strategy-consulting-skill.git}"
+REPO_URL="${AISC_REPO_URL:-https://github.com/vmysla/agent-skill-ai-strategy-consulting.git}"
 SKILL_NAME="ai-strategy-consulting"
 
 info()  { printf '\033[1;36m==>\033[0m %s\n' "$*"; }

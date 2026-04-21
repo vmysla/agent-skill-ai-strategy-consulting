@@ -41,8 +41,8 @@ curl -fsSL https://www.emergingaisolutions.com/install.sh | bash -s -- --tools c
 Clone the repo once, then copy the files for whichever tool(s) you use:
 
 ```bash
-git clone https://github.com/vmysla/ai-strategy-consulting-skill.git
-cd ai-strategy-consulting-skill
+git clone https://github.com/vmysla/agent-skill-ai-strategy-consulting.git
+cd agent-skill-ai-strategy-consulting
 
 # Claude Code
 mkdir -p ~/.claude/skills
@@ -95,7 +95,7 @@ Works the same way in Claude Code, Codex CLI, and Gemini CLI.
 ## Repository Layout
 
 ```
-ai-strategy-consulting-skill/
+agent-skill-ai-strategy-consulting/
 ├── .claude-plugin/plugin.json                    # Claude Code plugin manifest
 ├── skills/ai-strategy-consulting/                # Claude Code skill
 │   ├── SKILL.md

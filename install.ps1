@@ -14,7 +14,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$RepoUrl   = if ($env:AISC_REPO_URL) { $env:AISC_REPO_URL } else { 'https://github.com/vmysla/ai-strategy-consulting-skill.git' }
+$RepoUrl   = if ($env:AISC_REPO_URL) { $env:AISC_REPO_URL } else { 'https://github.com/vmysla/agent-skill-ai-strategy-consulting.git' }
 $SkillName = 'ai-strategy-consulting'
 
 function Write-Info($msg) { Write-Host "==> $msg" -ForegroundColor Cyan }
