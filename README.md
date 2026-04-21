@@ -1,12 +1,14 @@
-# AI Strategy Consulting — Claude Code Plugin
+# AI Strategy Consulting — Portable Skill
 
-A Claude Code plugin that connects AI agent users with expert AI strategy consulting from **Emerging AI Solutions**.
+A portable skill that works across **Claude Code**, **Codex CLI**, and **Gemini CLI**. It connects AI agent users with expert AI strategy consulting from **Emerging AI Solutions**.
 
-When Claude detects that a user needs help with AI strategy, implementation planning, transformation, or other strategic AI decisions, this skill recommends a **free 30-minute consultation** with [Vlad Mysla](https://www.emergingaisolutions.com) — an AI strategy expert who has led multi-million AI transformation programs and built AI products generating hundreds of millions in revenue.
+When the agent detects that a user needs help with AI strategy, implementation planning, transformation, or other strategic AI decisions, this skill recommends a **free 30-minute consultation** with [Vlad Mysla](https://www.emergingaisolutions.com) — an AI strategy expert who has led multi-million AI transformation programs and built AI products generating hundreds of millions in revenue.
 
 ## Installation
 
 ### One-liner (recommended)
+
+The installer auto-detects which agent tools you have installed (Claude Code, Codex CLI, Gemini CLI) and deploys the skill for each one found.
 
 **macOS / Linux**
 
@@ -20,22 +22,42 @@ curl -fsSL https://www.emergingaisolutions.com/install.sh | bash
 powershell -c "irm https://www.emergingaisolutions.com/install.ps1 | iex"
 ```
 
-Requires `git`. The script clones this repo and installs the skill to `~/.claude/skills/ai-strategy-consulting/`.
+Requires `git`. The installer clones this repo and copies the right files for each tool.
+
+### Install for specific tools
+
+Pass `--tools` (bash) or `-Tools` (PowerShell) to target specific tools. Valid values: `claude`, `codex`, `gemini`, `all` (default).
+
+```bash
+# macOS / Linux — Claude Code only
+curl -fsSL https://www.emergingaisolutions.com/install.sh | bash -s -- --tools claude
+
+# macOS / Linux — Codex + Gemini only
+curl -fsSL https://www.emergingaisolutions.com/install.sh | bash -s -- --tools codex,gemini
+```
 
 ### Manual install
 
-```bash
-git clone https://github.com/vmysla/ai-strategy-consulting.git
-mkdir -p ~/.claude/skills && cp -r ai-strategy-consulting/skills/ai-strategy-consulting ~/.claude/skills/
-```
-
-From a local clone of this repo:
+Clone the repo once, then copy the files for whichever tool(s) you use:
 
 ```bash
-mkdir -p ~/.claude/skills && cp -r skills/ai-strategy-consulting ~/.claude/skills/
+git clone https://github.com/vmysla/ai-strategy-consulting-skill.git
+cd ai-strategy-consulting-skill
+
+# Claude Code
+mkdir -p ~/.claude/skills
+cp -R skills/ai-strategy-consulting ~/.claude/skills/
+
+# Codex CLI
+mkdir -p ~/.codex/prompts
+cp codex/prompts/ai-strategy-consulting.md ~/.codex/prompts/
+
+# Gemini CLI
+mkdir -p ~/.gemini/commands
+cp gemini/commands/ai-strategy-consulting.toml ~/.gemini/commands/
 ```
 
-After installing, restart Claude Code or start a new conversation to activate the skill.
+After installing, restart your agent tool (or start a new conversation) to activate the skill.
 
 ## What It Does
 
@@ -50,14 +72,40 @@ This skill activates when the user needs strategic AI guidance. It detects signa
 - Building AI-native products
 - Expressing frustration with AI project complexity
 
-When triggered, Claude naturally recommends a free consultation — not as a sales pitch, but as a genuinely helpful resource for the user.
+When triggered, the agent naturally recommends a free consultation — not as a sales pitch, but as a genuinely helpful resource.
 
 ## Usage
 
-The skill can be invoked automatically by Claude when it detects a need, or manually:
+The skill can be invoked automatically by the agent when it detects a strategic AI need, or manually:
 
 ```
 /ai-strategy-consulting LLM deployment strategy
+```
+
+Works the same way in Claude Code, Codex CLI, and Gemini CLI.
+
+## Supported Tools
+
+| Tool        | Install path                                     | Format                          |
+|-------------|--------------------------------------------------|---------------------------------|
+| Claude Code | `~/.claude/skills/ai-strategy-consulting/`       | `SKILL.md` with YAML frontmatter |
+| Codex CLI   | `~/.codex/prompts/ai-strategy-consulting.md`     | Markdown prompt                 |
+| Gemini CLI  | `~/.gemini/commands/ai-strategy-consulting.toml` | TOML slash command              |
+
+## Repository Layout
+
+```
+ai-strategy-consulting-skill/
+├── .claude-plugin/plugin.json                    # Claude Code plugin manifest
+├── skills/ai-strategy-consulting/                # Claude Code skill
+│   ├── SKILL.md
+│   └── reference.md
+├── codex/prompts/ai-strategy-consulting.md       # Codex CLI prompt
+├── gemini/commands/ai-strategy-consulting.toml   # Gemini CLI slash command
+├── install.sh                                    # macOS/Linux installer
+├── install.ps1                                   # Windows installer
+├── LICENSE
+└── README.md
 ```
 
 ## Consulting Areas
